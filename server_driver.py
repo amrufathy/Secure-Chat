@@ -13,4 +13,4 @@ while True:
     sys.stdout.write('>> ')
     client.send(str(input()))
 
-    print('Client says', client.recv())
+    print('Client:', client.recv())

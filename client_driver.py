@@ -7,7 +7,7 @@ _socket.connect()
 print('Client connected to', _socket.get_host())
 
 while True:
-    print('Server says', _socket.recv())
+    print('Server:', _socket.recv())
 
     sys.stdout.write('>> ')
     _socket.send(str(input()))
