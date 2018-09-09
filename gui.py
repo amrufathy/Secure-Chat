@@ -30,7 +30,7 @@ def main(screen):
         sock = server.accept()
 
     elif _type == CLIENT:
-        sock = Client(('127.0.0.1', 9000))
+        sock = Client(('127.0.0.1', 9000), _type=1)
         sock.connect()
 
     screen.refresh()

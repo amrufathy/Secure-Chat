@@ -15,4 +15,4 @@ class Server:
 
     def accept(self):
         client_socket, client_addr = self._socket.accept()
-        return Client(client_addr, client_socket)
+        return Client(client_addr, client_socket, _type=0)

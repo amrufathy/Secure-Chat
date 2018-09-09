@@ -4,7 +4,7 @@ from DES import myDES
 
 
 class Client:
-    def __init__(self, addr, _socket=None):
+    def __init__(self, addr, _socket=None, _type=0):
         self.addr = addr
 
         if _socket is not None:
@@ -12,7 +12,7 @@ class Client:
         else:
             self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        self.encryption = myDES()
+        self.encryption = myDES(_type)
 
     def connect(self):
         try:
